@@ -9,8 +9,8 @@ namespace Лаб7
     public class RemoteControl
     {
         protected IRemoteControl Remote { get; private set; }
-        public int Power { get;  set; }
-        public int Mode { get;  set; }
+        public int Power { get;  protected set; }
+        public int Mode { get;  protected set; }
 
         public RemoteControl(IRemoteControl Remote)
         {
