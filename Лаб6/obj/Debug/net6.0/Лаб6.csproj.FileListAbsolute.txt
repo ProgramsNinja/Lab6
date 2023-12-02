@@ -12,3 +12,4 @@ C:\Users\dmitr\OneDrive\Рабочий стол\универ\ООАиП\Лаб6\
 C:\Users\dmitr\OneDrive\Рабочий стол\универ\ООАиП\Лаб6\Лаб6\obj\Debug\net6.0\Лаб6.pdb
 C:\Users\dmitr\OneDrive\Рабочий стол\универ\ООАиП\Лаб6\Лаб6\obj\Debug\net6.0\Лаб6.genruntimeconfig.cache
 C:\Users\dmitr\OneDrive\Рабочий стол\универ\ООАиП\Лаб6\Лаб6\obj\Debug\net6.0\ref\Лаб6.dll
+C:\Users\dmitr\OneDrive\Рабочий стол\универ\ООАиП\Лаб6\Лаб6\obj\Debug\net6.0\Лаб6.sourcelink.json
