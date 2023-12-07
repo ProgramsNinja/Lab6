@@ -29,6 +29,6 @@ namespace Лаб20
 
         protected abstract void Brew();
         protected abstract void AddСomponents();
-        protected abstract bool HasAdditives();
+        protected abstract bool IsAddish();
     }
 }

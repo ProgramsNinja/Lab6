@@ -8,11 +8,11 @@ namespace Лаб20
 {
     internal class Coffee : DrinkBehavior
     {
-        protected bool _withAdditives;
+        private bool _withAdditives;
 
         public Coffee(bool withAdditives)
         {
-            this._withAdditives = withAdditives;
+            _withAdditives = withAdditives;
         }
         protected override void Brew()
         {
@@ -20,7 +20,7 @@ namespace Лаб20
         }
         protected override void AddСomponents()
         {
-            if (_withAdditives)
+            if (IsAddish())
             {
                 Console.WriteLine("Добавляем сахар с молоком");
             }
@@ -29,7 +29,7 @@ namespace Лаб20
                 Console.WriteLine("ничего не добавляем в кофе");
             }
         }
-        protected override bool HasAdditives()
+        protected override bool IsAddish()
         {
             return _withAdditives;
         }

@@ -15,10 +15,13 @@ namespace Лаб20
 
         protected override void AddСomponents()
         {
-            Console.WriteLine("Добавляем лимон");
+            if (IsAddish())
+            {
+                Console.WriteLine("Добавляем лимон");
+            }
         }
 
-        protected override bool HasAdditives()
+        protected override bool IsAddish()
         {
             return true;
         }
