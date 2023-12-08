@@ -8,12 +8,13 @@ namespace Лаб11
 {
     internal class FileProxy : IFile
     {
+        private string _filePath;
         private File? _file;
-        private string _path;
-        public FileProxy(string path)
+
+        public FileProxy(string filePath)
         {
-            _path = path;
-            _file = new File(path);
+            _filePath = filePath;
+            _file = new File(filePath);
         }
 
         public double GetSize()
@@ -24,7 +25,7 @@ namespace Лаб11
             }
             else
             {
-                return new FileInfo(_path).Length;
+                return new FileInfo(_filePath).Length;
             }
         }
 
@@ -36,24 +37,17 @@ namespace Лаб11
             }
             else
             {
-                return _path;
+                return _filePath;
             }
-
         }
+
         public byte[] Show()
         {
             if (_file == null)
             {
-                _file = new File(_path);
+                _file = new File(_filePath);
             }
             return _file.Show();
-        }
-        public void Dispose()
-        {
-            if (_file != null)
-            {
-                _file.Dispose();
-            }
         }
     }
 }

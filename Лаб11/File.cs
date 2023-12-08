@@ -8,36 +8,32 @@ namespace Лаб11
 {
     internal class File : IFile
     {
-
-        private string _path;
-        private StreamReader _streamReader;
-        private File _file;
+        private string _filePath;
 
         public File(string path)
         {
-            _path = path;
-            _streamReader = new StreamReader(_path);
+            if (!System.IO.File.Exists(path))
+            {
+                throw new FileNotFoundException($"Файл не найден: {path}");
+            }
+
+            _filePath = path;
         }
 
         public double GetSize()
         {
-            var file = new FileInfo(_path);
+            var file = new FileInfo(_filePath);
             return file.Length;
         }
 
         public string GetPath()
         {
-            return _path;
+            return _filePath;
         }
 
         public byte[] Show()
         {
-            return System.IO.File.ReadAllBytes(_path);
-        }
-
-        public void Dispose()
-        {
-            _streamReader.Dispose();
+            return System.IO.File.ReadAllBytes(_filePath);
         }
     }
 }
