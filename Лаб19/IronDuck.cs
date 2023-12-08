@@ -8,22 +8,22 @@ namespace Лаб19
 {
     internal class IronDuck:Duck
     {
-        private IFly _flyType = new CantFly();
-        private ISwim _swimType = new CantSwim();
-        private IQuack _quackType=new CantQuack();
+        public IronDuck()
+            :base(new CantFly(),new CantQuack(),new CantSwim()) { }    
+       
         public override void AbilityFly()
         {
-            _flyType.Fly();
+            _fly.Fly();
         }
 
         public override void AbilityQuack()
         {
-            _quackType.Quack();
+            _quack.Quack();
         }
 
         public override void AbilitySwim()
         {
-            _swimType.Swim();
+            _swim.Swim();
         }
     }
 }

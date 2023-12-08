@@ -8,22 +8,22 @@ namespace Лаб19
 {
     internal class RubberDuck : Duck
     {
-        private IFly _flyType = new CantFly();
-        private ISwim _swimType = new CanSwim();
-        private IQuack _quackType = new CanQuack();
+        public RubberDuck()
+           : base(new CantFly(), new CanQuack(), new CanSwim()) { }
+
         public override void AbilityFly()
         {
-            _flyType.Fly();
+            _fly.Fly();
         }
 
         public override void AbilityQuack()
         {
-            _quackType.Quack();
+            _quack.Quack();
         }
 
         public override void AbilitySwim()
         {
-            _swimType.Swim();
+            _swim.Swim();
         }
     }
 }
