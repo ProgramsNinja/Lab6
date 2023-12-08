@@ -9,7 +9,11 @@ namespace Лаб9
     internal class Cappuccino : Coffee
     {
         public Cappuccino()
-        : base(25, "Капучино")
-        { }
+       : base("Капучино ") { }
+
+        public override double Price()
+        {
+            return 25;
+        }
     }
 }

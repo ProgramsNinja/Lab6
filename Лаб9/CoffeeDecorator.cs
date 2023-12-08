@@ -9,21 +9,19 @@ namespace Лаб9
 {
     internal abstract class CoffeeDecorator : Coffee
     {
-
         private Coffee _coffee;
+        private double _extraPrice;
 
-
-        public CoffeeDecorator(Coffee coffee, double Price, string Extra)
-            : base(Price, Extra)
+        public CoffeeDecorator(Coffee coffee, double extraPrice, string descriptionAddition)
+            : base(coffee.GetDescription() + descriptionAddition)
         {
-            ArgumentNullException.ThrowIfNull(coffee);
-
             _coffee = coffee;
+            _extraPrice = extraPrice;
         }
 
         public override double Price()
         {
-            return _coffee.Price() + base.Price();
+            return _coffee.Price() + _extraPrice;
         }
     }
 }

@@ -8,22 +8,22 @@ namespace Лаб9
 {
     internal abstract class Coffee
     {
-        private double _price;
-        private string _name;
-        public Coffee(double price, string name)
+        private string _description;
+
+        public Coffee(string description)
         {
-            _name += name;
-            _price = price;
+            if (string.IsNullOrEmpty(description))
+            {
+                throw new ArgumentException("Описание кофе не может быть пустым или равным null", nameof(description));
+            }
+            _description = description;
         }
 
-        public virtual double Price()
+        public virtual string GetDescription()
         {
-            return _price;
+            return _description;
         }
 
-        public virtual string OrderLine()
-        {
-            return _name;
-        }
+        public abstract double Price();
     }
 }
