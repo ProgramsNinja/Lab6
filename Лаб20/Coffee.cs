@@ -8,30 +8,23 @@ namespace Лаб20
 {
     internal class Coffee : DrinkBehavior
     {
-        private bool _withAdditives;
-
-        public Coffee(bool withAdditives)
+        private bool _isAddish;
+        public Coffee(bool isAddish)
         {
-            _withAdditives = withAdditives;
+            _isAddish = isAddish;
         }
+
         protected override void Brew()
         {
             Console.WriteLine("Завариваем кофе");
         }
         protected override void AddСomponents()
         {
-            if (IsAddish())
-            {
                 Console.WriteLine("Добавляем сахар с молоком");
-            }
-            else
-            {
-                Console.WriteLine("ничего не добавляем в кофе");
-            }
         }
         protected override bool IsAddish()
         {
-            return _withAdditives;
+            return _isAddish;
         }
     }
 }

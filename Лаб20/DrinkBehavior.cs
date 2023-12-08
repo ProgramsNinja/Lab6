@@ -14,7 +14,10 @@ namespace Лаб20
             BoilerWater();
             Brew();
             PourIntoMug();
-            AddСomponents();
+            if (IsAddish())
+            {
+                AddСomponents();
+            }
         }
 
         public void BoilerWater()
@@ -29,6 +32,9 @@ namespace Лаб20
 
         protected abstract void Brew();
         protected abstract void AddСomponents();
-        protected abstract bool IsAddish();
+        protected virtual bool IsAddish()
+        {
+            return true;
+        }
     }
 }
