@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Лаб8
 {
-    internal abstract class MenuComponent
+    public abstract class MenuComponent
     {
-        protected string name;
-        protected List<MenuComponent> _menuComponents = new List<MenuComponent>();
+        private string name;
+        private List<MenuComponent> _menuComponents = new List<MenuComponent>();
 
         public MenuComponent(string name)
         {
