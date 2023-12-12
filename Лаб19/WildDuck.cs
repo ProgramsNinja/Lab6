@@ -10,20 +10,5 @@ namespace Лаб19
     {
         public WildDuck()
            : base(new CanFly(), new CanQuack(), new CanSwim()) { }
-
-        public override void AbilityFly()
-        {
-            _fly.Fly();
-        }
-
-        public override void AbilityQuack()
-        {
-            _quack.Quack();
-        }
-
-        public override void AbilitySwim()
-        {
-            _swim.Swim();
-        }
     }
 }

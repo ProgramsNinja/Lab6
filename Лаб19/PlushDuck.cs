@@ -9,21 +9,6 @@ namespace Лаб19
     internal class PlushDuck:Duck
     {
         public PlushDuck()
-           : base(new CantFly(), new CanQuack(), new CantSwim()) { }
-
-        public override void AbilityFly()
-        {
-            _fly.Fly();
-        }
-
-        public override void AbilityQuack()
-        {
-            _quack.Quack();
-        }
-
-        public override void AbilitySwim()
-        {
-            _swim.Swim();
-        }
+           : base(new CantFly(), new CanQuack(), new CantSwim()) { }        
     }
 }

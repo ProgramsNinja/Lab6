@@ -6,19 +6,28 @@ using System.Threading.Tasks;
 
 namespace Лаб19
 {
-    internal abstract  class Duck
+    internal abstract class Duck
     {
-        protected IFly _fly;
-        protected ISwim _swim;
-         protected IQuack _quack;
+        private IFly _fly;
+        private ISwim _swim;
+        private IQuack _quack;
         protected Duck(IFly fly, IQuack quack, ISwim swim)
         {
             _fly = fly;
             _quack = quack;
             _swim = swim;
         }
-        public abstract void AbilityFly();
-        public abstract void AbilitySwim();
-        public abstract void AbilityQuack();
+        public virtual void AbilityFly()
+        {
+            _fly.Fly();
+        }
+        public virtual void AbilitySwim()
+        {
+            _swim.Swim();
+        }
+        public virtual void AbilityQuack()
+        {
+            _quack.Quack();
+        }
     }
 }
